@@ -39,8 +39,8 @@ const checkWin =()=>{
         
         if((boxtext[e[0]].innerText !== "") && (boxtext[e[1]].innerText !== "") && (boxtext[e[2]].innerText !== "")){
             count++;
-            if(count === 8){
-                isGameOver=true;
+            if(count === 8 && isGameOver){
+                // isGameOver=true;
                 gameOver.play();
                 document.querySelector(".imageBox").getElementsByTagName("img")[0].style.width = "200px";
                 document.querySelector(".info").innerText = "Game tied";
